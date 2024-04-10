@@ -68,22 +68,19 @@
       "./images/image7.gif"
     ];
   
-    noButton.addEventListener('click', function() {
-      if (noClickCount < 4) {
-        noClickCount++;
-        imageDisplay.src = imagePaths[noClickCount];
-        buttonHeight += 45; // Increase height by 5px on each click
-        buttonWidth += 45;
-        fontSize += 35; // Increase font size by 1px on each click
-        yesButton.style.height = `${buttonHeight}px`; // Update button height
-        yesButton.style.width = `${buttonWidth}px`;
-        yesButton.style.fontSize = `${fontSize}px`; // Update font size
-        if (noClickCount < 28) {
-          noButton.textContent = ["No", "Are you sure?", "please","I'm gonna cry...","Please","Just think about it","are you really sure?","if you say no I'll be very sad","I'll be very very sad","I'll be very very very sad","I'll be very very very very sad","ok fine i'll stop asking...","Just Kidding, PLEASE SAY YES","I'll be very very very very very sad :(","you're breaking my heart;(","No","Are you sure?","Really sure?","Are you positive?","pleaseee","Fine I'll stop asking","No", "Are you sure?", "please", "Don't do this to me :("][noClickCount];
-        }
-      }
-    });
-  
+  noButton.addEventListener('click', function() {
+  if (noClickCount < 4) {
+    noClickCount++;
+    imageDisplay.src = imagePaths[noClickCount];
+    buttonHeight += 45; // Increase height by 45px on each click
+    buttonWidth += 45; // Increase width by 45px on each click
+    fontSize += 10; // Increase font size by 10px on each click
+    yesButton.style.height = `${buttonHeight}px`; // Update button height
+    yesButton.style.width = `${buttonWidth}px`; // Update button width
+    yesButton.style.fontSize = `${fontSize}px`; // Update font size
+  }
+});
+
     yesButton.addEventListener('click', () => {
       imageDisplay.src = './images/image7.gif'; // Change to image7.gif
       valentineQuestion.textContent = "Yayyy!! :3"; // Change the question text
