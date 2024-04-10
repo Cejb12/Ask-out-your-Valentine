@@ -69,12 +69,12 @@
     ];
   
     noButton.addEventListener('click', function() {
-      if (noClickCount < 4) {
+      if (noClickCount < 1) {
         noClickCount++;
         imageDisplay.src = imagePaths[noClickCount];
-        buttonHeight += 45; // Increase height by 5px on each click
-        buttonWidth += 45;
-        fontSize += 35; // Increase font size by 1px on each click
+        buttonHeight += 65; // Increase height by 5px on each click
+        buttonWidth += 55;
+        fontSize += 45; // Increase font size by 1px on each click
         yesButton.style.height = `${buttonHeight}px`; // Update button height
         yesButton.style.width = `${buttonWidth}px`;
         yesButton.style.fontSize = `${fontSize}px`; // Update font size
